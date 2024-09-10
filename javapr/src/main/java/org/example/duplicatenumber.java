@@ -10,39 +10,25 @@ import java.util.*;
 //Output: 2 3
 //Explanation: 2 and 3 occur more than once in the given array.
 public class duplicatenumber {
+    public  ArrayList<Integer> duplicates(int[] arr) {
+        // code here
+        ArrayList<Integer> List1=new ArrayList<>();
+        int[] arr1 = new int[arr.length];
 
-    public List<Integer> duplicate(int[] arr){
-        ArrayList<Integer> list=new ArrayList<>();
-//
-
-
-//        for (int i = 0; i < arr.length; i++) {
-//
-//            for (int j = 0; j < arr.length; j++) {
-//                if(arr[i]==arr[j]&&i!=j){
-//                    list.add(arr[i]);
-//                }
-//
-//            }
-//
-//        }
-//
-//        Set<Integer> set = new HashSet<>(list);
-//        ArrayList<Integer>List1= new ArrayList<>(set);
-//        if(List1.isEmpty())
-//        {
-//            List1.add(-1);
-//
-//        }
-        int n=arr.length;
-        List<Integer> list1 = new ArrayList<>(n);
-        for (int i = 0; i < n; i++) {
-            list1.add(0);
+        for(int i=0;i<arr1.length;i++){
+            arr1[i]=0;
         }
-        for (int i = 0; i < arr.length; i++) {
-
-            list1.add(arr[i],1);
+        for(int i=0;i<arr.length;i++){
+            arr1[arr[i]]++;
         }
-        return list1;
+        for(int i=0;i<arr1.length;i++){
+            if(arr1[i]>1)
+            {
+                System.out.println(i+"  "+arr1[i]);
+                List1.add(i);
+            }
+        }
+        return List1;
     }
+
 }

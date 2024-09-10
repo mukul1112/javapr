@@ -4,9 +4,11 @@ package org.example;
 import recursion.factorial;
 import recursion.product;
 import stream.averageofinteger;
+import stream.employee;
+import stream.partioning;
+import stream.sumarizing;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main  {
     public static void main(String[] args) {
@@ -26,9 +28,10 @@ public class Main  {
 //        List<Integer> list=fib.fibbonachi(5);
 //        System.out.println(list);
 
-//        StringSub str=new StringSub();
-//
-//        //List<String> string =str.substrings("abc");
+//              StringSub str=new StringSub();
+//              str.Substring("aabe");
+////
+//        List<String> string =str.substrings("abc");
 //        List<String> strings = str.substrings("abcd");
 //        System.out.println(strings);
 //        System.out.println(strings.toArray().length);
@@ -64,7 +67,7 @@ public class Main  {
 
 //        duplicatenumber dc = new duplicatenumber();
 //        int[] arr = {1, 2, 3, 4, 5, 5, 6, 7, 3, 4, 2, 4, 5};
-//        List<Integer> duplicate = dc.duplicate(arr);
+//        List<Integer> duplicate = dc.duplicates(arr);
 //        System.out.println(duplicate);
 ////
 //
@@ -97,10 +100,56 @@ public class Main  {
 //        fibbonaci fibbonaci = new fibbonaci();
 //        fibbonaci.fibbonachi(7);
 
-            factorial fc=  new factorial();
-        int factorial = fc.factorial(6);
-        System.out.println(factorial);
+//            factorial fc=  new factorial();
+//        int factorial = fc.factorial(6);
+//        System.out.println(factorial);
+
+//        anagramstring an=new anagramstring();
+//        boolean b = an.checkAangrma("bat", "tab");
+//        System.out.println(b);
+//        int x=5;
+//        int y=--x;
+//        System.out.println(y);
+//        System.out.println(x);
+//        System.out.println(x+""+y);
+
+
+//        firstNonRepeatingChar fr=new firstNonRepeatingChar();
+//        char ch = fr.nonrepeatingCharacter("yy");
+//        System.out.println(ch);
+        //AddTwoArrayAsNumber add= new AddTwoArrayAsNumber();
+//        int[] arr={8,3,4};
+//        int[] arr2={1,4,1};
+//
+//        int[] ints = add.sumofdArray(arr, arr2);
+//
+
+
+//
+//        List<employee> emplist=new ArrayList<>();
+//        emplist.add(new employee("mukul",23,4500));
+//        emplist.add(new employee("mukul",22,43445));
+//        emplist.add(new employee("mukul",21,4556));
+//
+//        System.out.println(emplist.toString());
+//        Optional<employee> first = emplist.stream().max(Comparator.comparingDouble(e->e.salary));
+//        System.out.println(first.toString());
+
+        List<Integer> list=new ArrayList<>();
+        list.add(3);
+        list.add(4);
+        list.add(2);
+        list.add(5);
+        list.add(6);
+        partioning part=new partioning();
+        sumarizing sumarry =new sumarizing();
+        IntSummaryStatistics summarystaus = sumarry.summarystaus(list);
+        System.out.println(summarystaus.getAverage());
+        Map<Boolean, List<Integer>> partion = part.partion(list);
+        System.out.println(partion);
 
     }
+
+
 
 }

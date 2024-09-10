@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class reveseString {
 
     public String reveseString(String str){
@@ -12,5 +15,6 @@ public class reveseString {
 
         return reverseString;
     }
+    Set<Character> hs=new HashSet<>();
 
 }

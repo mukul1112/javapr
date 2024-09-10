@@ -21,4 +21,13 @@ public class StringSub {
         return String;
     }
 
+    public void Substring(String str){
+
+        for (int i = 0; i < str.length(); i++) {
+            String str1=str.substring(i);
+            System.out.println(str1
+            );
+        }
+    }
+
 }
